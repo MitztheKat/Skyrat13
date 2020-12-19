@@ -1,5 +1,8 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Welcome to Skyrat Station 13!</h1>
+<h3>Nantorasen Inc. Tachanka Division welcomes you.</h3>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>This server is running a custom-built Hyper Station 13 build.</i>
+<i>Read our custom-built guidelines at the top!</i>
+<i>feel free to ask ping us on discord at <a href="https://discord.gg/XnR6AfA">tachanka's troopers!</a></i>
