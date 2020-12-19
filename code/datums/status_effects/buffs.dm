@@ -425,11 +425,9 @@
 	owner.visible_message("<span class='warning'>[owner]'s inhuman strength dissipates and the sword's runes grow cold!</span>")
 
 //Used by changelings to rapidly heal
-//Heals 10 brute and oxygen damage every second, and 5 fire
 //Being on fire will suppress this healing
 /datum/status_effect/fleshmend
 	id = "fleshmend"
-	duration = 100
 	alert_type = /obj/screen/alert/status_effect/fleshmend
 
 /datum/status_effect/fleshmend/tick()
@@ -438,19 +436,14 @@
 		return
 	else
 		linked_alert.icon_state = "fleshmend"
-	owner.adjustBruteLoss(-10, FALSE)
-	owner.adjustFireLoss(-5, FALSE)
-	owner.adjustOxyLoss(-10)
-	//skyrat edit - this is extremely yikes but i'll have to fix it later.
-	if(!iscarbon(owner))
-		return
-	var/mob/living/carbon/C = owner
-	QDEL_LIST(C.all_scars)
-	//
+	owner.adjustBruteLoss(-1, FALSE)
+	owner.adjustFireLoss(-0.15, FALSE)
+	owner.adjustOxyLoss(-0.3, FALSE)
+	owner.adjustCloneLoss(-0.2)
 
 /obj/screen/alert/status_effect/fleshmend
 	name = "Fleshmend"
-	desc = "Our wounds are rapidly healing. <i>This effect is prevented if we are on fire.</i>"
+	desc = "Our wounds rapidly heal. <i>This effect is prevented if we are on fire.</i>"
 	icon_state = "fleshmend"
 
 /datum/status_effect/exercised
