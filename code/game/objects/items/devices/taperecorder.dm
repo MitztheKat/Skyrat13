@@ -150,6 +150,21 @@
 		T.visible_message("<font color=Maroon><B>Tape Recorder</B>: Playback stopped.</font>")
 	update_icon()
 
+/obj/item/taperecorder/verb/reset()
+	set name = "Reset Tape"
+	set category = "Object"
+
+	if(!can_use(usr))
+		return
+	if(!mytape || mytape.ruined)
+		return
+	if(recording)
+		return
+	if(playing)
+		return
+	mytape.storedinfo = list()
+	mytape.timestamp = list()
+	say("Recorder reset.")
 
 /obj/item/taperecorder/verb/play()
 	set name = "Play Tape"

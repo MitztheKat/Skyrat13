@@ -28,6 +28,7 @@
 		"brown" = rgb(160, 82, 18),
 		"green" = rgb(14, 127, 27),
 		"cyan" = rgb(24, 162, 213),
+		"cyan2" = rgb(24, 162, 213),
 		"yellow" = rgb(255, 165, 0)
 	)
 	sharpness = SHARP_POINTY
@@ -110,7 +111,7 @@
 
 /obj/item/screwdriver/power
 	name = "hand drill"
-	desc = "A simple powered hand drill. It's fitted with a screw bit."
+	desc = "A simple powered hand drill. Can be fitted with a bolt head for wrenching, or a screw head for screwing"
 	icon_state = "drill_screw"
 	item_state = "drill"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
@@ -124,7 +125,7 @@
 	attack_verb = list("drilled", "screwed", "jabbed","whacked")
 	hitsound = 'sound/items/drill_hit.ogg'
 	usesound = 'sound/items/drill_use.ogg'
-	toolspeed = 0.25
+	toolspeed = 0.2
 	random_color = FALSE
 
 /obj/item/screwdriver/power/suicide_act(mob/user)
@@ -132,12 +133,15 @@
 	return(BRUTELOSS)
 
 /obj/item/screwdriver/power/attack_self(mob/user)
-	playsound(get_turf(user),'sound/items/change_drill.ogg',50,1)
-	var/obj/item/wrench/power/b_drill = new /obj/item/wrench/power(drop_location())
-	b_drill.name = name // Skyrat fix
-	to_chat(user, "<span class='notice'>You attach the bolt driver bit to [src].</span>")
-	qdel(src)
-	user.put_in_active_hand(b_drill)
+	playsound(get_turf(user), 'sound/items/change_drill.ogg', 50, TRUE)
+	if(tool_behaviour == TOOL_SCREWDRIVER)
+		tool_behaviour = TOOL_WRENCH
+		to_chat(user, "<span class='notice'>You attach the bolt bit to [src].</span>")
+		icon_state = "drill_bolt"
+	else
+		tool_behaviour = TOOL_SCREWDRIVER
+		to_chat(user, "<span class='notice'>You attach the screw bit to [src].</span>")
+		icon_state = "drill_screw"
 
 /obj/item/screwdriver/cyborg
 	name = "automated screwdriver"

@@ -766,12 +766,11 @@
 		/obj/item/stack/sheet,
 		/obj/item/stack/tile,
 		/obj/item/stack/rods,
-		/obj/item/stock_parts
+		/obj/item/stock_parts,
+		/obj/item/stack/cable_coil
 		)
 	//Basically a blacklist for any subtypes above we dont want
 	var/list/cannot_hold = list(
-		/obj/item/stack/sheet/mineral/plasma,
-		/obj/item/stack/sheet/plasteel
 		)
 
 	var/obj/item/wrapped = null // Item currently being held.
@@ -850,6 +849,19 @@
 		/obj/item/reagent_containers/glass,
 		/obj/item/reagent_containers/pill,
 		/obj/item/reagent_containers/blood
+		)
+
+/obj/item/weapon/gripper/security
+	name = "security gripper"
+	desc = "A simple grasping tool for interacting with security equipment, such as forensic scanners, weapons (can't use them), implanters and more. Alt click to drop instead of use."
+	icon_state = "gripper"
+	can_hold = list(
+		/obj/item/gun,
+		/obj/item/detective_scanner,
+		/obj/item/restraints/handcuffs,
+		/obj/item/melee/baton,
+		/obj/item/implantcase/mindshield,
+		/obj/item/implanter/mindshield
 		)
 
 /obj/item/gun/energy/plasmacutter/cyborg

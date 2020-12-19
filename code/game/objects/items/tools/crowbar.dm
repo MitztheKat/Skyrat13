@@ -71,7 +71,7 @@
 
 /obj/item/crowbar/power
 	name = "jaws of life"
-	desc = "A set of jaws of life, compressed through the magic of science. It's fitted with a prying head."
+	desc = "A set of jaws of life, compressed through the magic of science. It can be fitted with a prying head for crowbar duties, or a cutting head for wirecutting. "
 	icon_state = "jaws_pry"
 	item_state = "jawsoflife"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
@@ -88,12 +88,17 @@
 	return (BRUTELOSS)
 
 /obj/item/crowbar/power/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
-	var/obj/item/wirecutters/power/cutjaws = new /obj/item/wirecutters/power(drop_location())
-	cutjaws.name = name // Skyrat fix
-	to_chat(user, "<span class='notice'>You attach the cutting jaws to [src].</span>")
-	qdel(src)
-	user.put_in_active_hand(cutjaws)
+	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, TRUE)
+	if(tool_behaviour == TOOL_CROWBAR)
+		tool_behaviour = TOOL_WIRECUTTER
+		to_chat(user, "<span class='notice'>You attach the cutting jaws to [src].</span>")
+		usesound = 'sound/items/jaws_cut.ogg'
+		update_icon()
+	else
+		tool_behaviour = TOOL_CROWBAR
+		to_chat(user, "<span class='notice'>You attach the prying jaws to [src].</span>")
+		usesound = 'sound/items/jaws_pry.ogg'
+		update_icon()
 
 /obj/item/crowbar/advanced
 	name = "advanced crowbar"

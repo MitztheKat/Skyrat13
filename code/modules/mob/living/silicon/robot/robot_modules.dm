@@ -334,12 +334,9 @@
 		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/syringe,
 		/obj/item/surgical_drapes,
-		/obj/item/retractor,
-		/obj/item/hemostat,
-		/obj/item/cautery,
-		/obj/item/surgicaldrill,
-		/obj/item/scalpel,
-		/obj/item/circular_saw,
+		/obj/item/scalpel/advanced,
+		/obj/item/retractor/advanced,
+		/obj/item/surgicaldrill/advanced,
 		//skyrat edit
 		/obj/item/bonesetter,
 		//
@@ -487,10 +484,8 @@
 		/obj/item/pipe_dispenser,
 		/obj/item/extinguisher,
 		/obj/item/weldingtool/largetank/cyborg,
-		/obj/item/screwdriver/cyborg,
-		/obj/item/wrench/cyborg,
-		/obj/item/crowbar/cyborg,
-		/obj/item/wirecutters/cyborg,
+		/obj/item/screwdriver/power,
+		/obj/item/crowbar/power,
 		/obj/item/multitool/cyborg,
 		/obj/item/t_scanner,
 		/obj/item/analyzer,
@@ -641,11 +636,14 @@
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/crowbar/cyborg,
+		/obj/item/taperecorder,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/baton/loaded,
-		/obj/item/gun/energy/disabler/cyborg,
+		/obj/item/gun/energy/e_gun/advtaser/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
-		/obj/item/pinpointer/crew)
+		/obj/item/pinpointer/crew,
+		/obj/item/weapon/gripper/security
+		)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security,
 		/obj/item/clockwork/weapon/ratvarian_spear)

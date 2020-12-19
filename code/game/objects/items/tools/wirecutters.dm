@@ -28,6 +28,7 @@
 		"brown" = "#a05212",
 		"green" = "#0e7f1b",
 		"cyan" = "#18a2d5",
+		"cyan2" = "#18a2d5",
 		"yellow" = "#d58c18"
 	)
 
@@ -47,14 +48,6 @@
 	var/mutable_appearance/base_overlay = mutable_appearance(icon, "cutters_cutty_thingy")
 	base_overlay.appearance_flags = RESET_COLOR
 	. += base_overlay
-
-/obj/item/wirecutters/attack(mob/living/carbon/C, mob/user)
-	if(istype(C) && C.handcuffed && istype(C.handcuffed, /obj/item/restraints/handcuffs/cable))
-		user.visible_message("<span class='notice'>[user] cuts [C]'s restraints with [src]!</span>")
-		qdel(C.handcuffed)
-		return
-	else
-		..()
 
 /obj/item/wirecutters/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is cutting at [user.p_their()] arteries with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -92,37 +85,7 @@
 	toolspeed = 0.5
 	random_color = FALSE
 
-/obj/item/wirecutters/power
-	name = "jaws of life"
-	desc = "A set of jaws of life, compressed through the magic of science. It's fitted with a cutting head."
-	icon_state = "jaws_cutter"
-	item_state = "jawsoflife"
-
-	custom_materials = list(/datum/material/iron=150,/datum/material/silver=50,/datum/material/titanium=25)
-	usesound = 'sound/items/jaws_cut.ogg'
-	toolspeed = 0.25
-	random_color = FALSE
-
-/obj/item/wirecutters/power/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is wrapping \the [src] around [user.p_their()] neck. It looks like [user.p_theyre()] trying to rip [user.p_their()] head off!</span>")
-	playsound(loc, 'sound/items/jaws_cut.ogg', 50, 1, -1)
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		var/obj/item/bodypart/BP = C.get_bodypart(BODY_ZONE_HEAD)
-		if(BP)
-			BP.drop_limb()
-			playsound(loc,pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg') ,50, 1, -1)
-	return (BRUTELOSS)
-
-/obj/item/wirecutters/power/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
-	var/obj/item/crowbar/power/pryjaws = new /obj/item/crowbar/power(drop_location())
-	pryjaws.name = name // Skyrat fix
-	to_chat(user, "<span class='notice'>You attach the pry jaws to [src].</span>")
-	qdel(src)
-	user.put_in_active_hand(pryjaws)
-
-/obj/item/wirecutters/power/attack(mob/living/carbon/C, mob/user)
+/obj/item/wirecutters/attack(mob/living/carbon/C, mob/user)
 	if(istype(C))
 		if(C.handcuffed)
 			user.visible_message("<span class='notice'>[user] cuts [C]'s restraints with [src]!</span>")
