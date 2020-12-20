@@ -39444,6 +39444,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"cYF" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit/green,
+/area/ai_monitored/turret_protected/ai)
 "dai" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
@@ -90171,9 +90175,9 @@ sxC
 adQ
 sLC
 sLJ
-ahQ
+cYF
 sLT
-ahQ
+cYF
 sMa
 sLC
 sMr
@@ -91713,9 +91717,9 @@ adQ
 sxC
 sLC
 sLN
-ahQ
+cYF
 sLX
-ahQ
+cYF
 sMg
 sLC
 sMr

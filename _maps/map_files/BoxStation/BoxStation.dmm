@@ -51953,6 +51953,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "cBe" = (
@@ -55272,6 +55273,10 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
 /area/security/range)
+"ifr" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai)
 "iiW" = (
 /turf/open/floor/wood,
 /area/maintenance/bar)
@@ -98944,7 +98949,7 @@ cwu
 cAV
 cAZ
 cvl
-cvl
+ifr
 cva
 cva
 cva
@@ -99715,7 +99720,7 @@ cvv
 cvv
 cvv
 cvp
-cvl
+ifr
 cva
 cva
 cva
@@ -99972,7 +99977,7 @@ cAT
 cAW
 cvl
 cvl
-cvl
+ifr
 cva
 cva
 cva

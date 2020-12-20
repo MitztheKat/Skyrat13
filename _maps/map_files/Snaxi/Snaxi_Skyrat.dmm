@@ -18434,6 +18434,7 @@
 	pixel_x = 30;
 	pixel_y = 30
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "irQ" = (
@@ -28211,6 +28212,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"otd" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai)
 "oto" = (
 /turf/closed/wall,
 /area/medical/surgery)
@@ -35878,6 +35883,7 @@
 	pixel_x = -28;
 	pixel_y = -28
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "sZT" = (
@@ -52786,7 +52792,7 @@ buI
 phs
 ghq
 cXI
-irr
+otd
 tFu
 hmC
 rBA
@@ -52794,7 +52800,7 @@ dfy
 ihn
 xWi
 irr
-irr
+otd
 ghq
 ghq
 bUB

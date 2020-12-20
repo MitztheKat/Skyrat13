@@ -50260,6 +50260,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "cBe" = (
@@ -57249,6 +57250,10 @@
 /obj/structure/chair/comfy/green,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
+"jGM" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai)
 "jGW" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -105141,7 +105146,7 @@ cwu
 cAV
 cAZ
 cvl
-cvl
+jGM
 cva
 cva
 cva
@@ -105912,7 +105917,7 @@ cvv
 cvv
 cvv
 cvp
-cvl
+jGM
 cva
 cva
 cva
@@ -106169,7 +106174,7 @@ cAT
 cAW
 cvl
 cvl
-cvl
+jGM
 cva
 cva
 cva
