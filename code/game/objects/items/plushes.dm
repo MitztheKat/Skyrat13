@@ -613,17 +613,36 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 	desc = "A cute toy that resembles an even cuter bee."
 	icon_state = "plushie_h"
 	item_state = "plushie_h"
-	attack_verb = list("stung")
+	attack_verb = list("buzzed")
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
-
+	
 /obj/item/toy/plush/mothplushie
-	name = "insect plushie"
-	desc = "An adorable stuffed toy that resembles some kind of insect."
-	icon_state = "bumble"
-	item_state = "bumble"
-	squeak_override = list('modular_citadel/sound/voice/mothsqueak.ogg' = 1)
-	can_random_spawn = FALSE
+	name = "moth plushie"
+	desc = "A cute toy that resembles an even cuter bee."
+	icon_state = "plushie_h"
+	item_state = "plushie_h"
+	attack_verb = list("stung")
+	gender = MALE // I want infinite moth plushies.
+	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
+	var/suicide_count = 0
+	
+/obj/item/toy/plush/mothplushie/suicide_act(mob/living/user)
+	user.visible_message("<span class='suicide'>[user] stares deeply into the eyes of [src] and it begins consuming [user.p_them()]!  It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	suicide_count++
+	if(suicide_count < 3)
+		desc = "A plushie depicting an unsettling mothperson. After killing [suicide_count] [suicide_count == 1 ? "person" : "people"] it's not looking so huggable now..."
+	else
+		desc = "A plushie depicting a creepy mothperson. It's killed [suicide_count] people! I don't think I want to hug it any more!"
+		divine = TRUE
+		resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
+	playsound(src, 'sound/hallucinations/wail.ogg', 50, TRUE, -1)
+	var/list/available_spots = get_adjacent_open_turfs(loc)
+	if(available_spots.len) //If the user is in a confined space the plushie will drop normally as the user dies, but in the open the plush is placed one tile away from the user to prevent squeak spam
+		var/turf/open/random_open_spot = pick(available_spots)
+		forceMove(random_open_spot)
+	user.dust(just_ash = FALSE, drop_items = TRUE)
+	return MANUAL_SUICIDE
 
 /obj/item/toy/plush/lampplushie
 	name = "lamp plushie"
