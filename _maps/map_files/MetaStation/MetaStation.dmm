@@ -23938,12 +23938,14 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "aVn" = (
 /obj/structure/showcase/cyborg/old{
 	pixel_y = 20
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "aVp" = (
@@ -23958,6 +23960,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "aVq" = (
@@ -23965,6 +23968,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "aVr" = (

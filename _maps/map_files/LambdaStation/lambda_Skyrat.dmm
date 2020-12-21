@@ -82081,6 +82081,11 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/aft)
+"cYx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit,
+/area/ai_monitored/turret_protected/ai)
 "dZF" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -82147,6 +82152,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+"jli" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit,
+/area/ai_monitored/turret_protected/ai)
 "jUe" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -97344,7 +97353,7 @@ bFw
 bHq
 bId
 bFv
-bFv
+cYx
 bKE
 bLj
 bLJ
@@ -97601,7 +97610,7 @@ bCR
 bCR
 bIg
 bCR
-bFw
+jli
 bKF
 bNx
 bLJ
@@ -98115,7 +98124,7 @@ bCR
 bCR
 bIh
 bCR
-bFw
+jli
 bKF
 bMF
 bLJ
@@ -98372,7 +98381,7 @@ bFy
 bFy
 bKb
 bFw
-bFw
+jli
 bKF
 bLk
 bLJ

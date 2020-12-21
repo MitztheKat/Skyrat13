@@ -232,6 +232,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 5
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "aaG" = (
@@ -248,6 +249,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "aaI" = (
@@ -415,6 +417,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "aaV" = (
@@ -519,6 +522,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 10
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "abf" = (

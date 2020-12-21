@@ -108,12 +108,14 @@
 	pixel_y = 24
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "aan" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
@@ -178,6 +180,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
@@ -258,6 +261,7 @@
 	name = "core camera";
 	network = list("aicore")
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai)
 "aaE" = (

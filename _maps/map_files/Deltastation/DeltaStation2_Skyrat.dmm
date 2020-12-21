@@ -39307,6 +39307,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/mob/living/silicon/robot/shell,
 /turf/open/floor/circuit/green,
 /area/ai_monitored/turret_protected/ai)
 "bLz" = (
@@ -39338,6 +39339,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/circuit/green,
 /area/ai_monitored/turret_protected/ai)
 "bLD" = (
@@ -98990,6 +98992,13 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+"lnJ" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit/green,
+/area/ai_monitored/turret_protected/ai)
 "lnX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -111656,7 +111665,7 @@ bCq
 bFS
 bCq
 bCq
-bLz
+lnJ
 bNw
 bPC
 bRF
@@ -112684,7 +112693,7 @@ bxA
 bFU
 bxA
 bJK
-bLz
+lnJ
 bCq
 bPH
 bRF
