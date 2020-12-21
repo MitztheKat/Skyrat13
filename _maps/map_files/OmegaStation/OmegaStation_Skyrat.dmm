@@ -8055,6 +8055,7 @@
 	dir = 4
 	},
 /obj/item/stamp/ce,
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/chief)
 "amG" = (

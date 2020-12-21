@@ -45627,6 +45627,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "cka" = (
