@@ -26394,6 +26394,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/cartridge/atmos,
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "bbu" = (

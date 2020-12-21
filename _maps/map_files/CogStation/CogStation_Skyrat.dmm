@@ -35435,6 +35435,7 @@
 	name = "Station Intercom (Common)";
 	pixel_y = -29
 	},
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "bys" = (

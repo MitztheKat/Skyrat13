@@ -30003,6 +30003,7 @@
 	req_access_txt = "11"
 	},
 /obj/item/paper/monitorkey,
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "puS" = (
