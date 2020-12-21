@@ -4161,7 +4161,7 @@
 /area/engine/supermatter)
 "aOP" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/dice,
+/obj/item/storage/pill_bottle/dice,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "aPw" = (
@@ -19265,6 +19265,7 @@
 	pixel_x = 30;
 	pixel_y = 30
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "irQ" = (
@@ -27699,7 +27700,7 @@
 "nIM" = (
 /obj/structure/table/wood/poker,
 /obj/item/toy/cards/deck,
-/obj/item/storage/box/dice{
+/obj/item/storage/pill_bottle/dice{
 	pixel_x = 8
 	},
 /obj/structure/sign/poster/contraband/random{
@@ -28622,6 +28623,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"ojE" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai)
 "ojP" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
@@ -33093,7 +33098,7 @@
 /area/bridge)
 "qMN" = (
 /obj/structure/table,
-/obj/item/storage/box/dice,
+/obj/item/storage/pill_bottle/dice,
 /turf/open/floor/plasteel/grimy,
 /area/crew_quarters/fitness/recreation)
 "qNB" = (
@@ -36547,6 +36552,7 @@
 	pixel_x = -28;
 	pixel_y = -28
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "sZT" = (
@@ -53347,7 +53353,7 @@ buI
 phs
 ghq
 cXI
-irr
+ojE
 tFu
 hmC
 rBA
@@ -53355,7 +53361,7 @@ dfy
 ihn
 xWi
 irr
-irr
+ojE
 ghq
 ghq
 bUB

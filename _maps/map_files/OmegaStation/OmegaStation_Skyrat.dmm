@@ -41400,6 +41400,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/atmos)
+"oun" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit/green,
+/area/ai_monitored/turret_protected/ai)
 "oxb" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior,
@@ -90158,9 +90162,9 @@ sxC
 adQ
 sLC
 sLJ
-ahQ
+oun
 sLT
-ahQ
+oun
 sMa
 sLC
 sMr
@@ -91700,9 +91704,9 @@ adQ
 sxC
 sLC
 sLN
-ahQ
+oun
 sLX
-ahQ
+oun
 sMg
 sLC
 sMr

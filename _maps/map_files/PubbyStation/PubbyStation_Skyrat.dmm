@@ -426,6 +426,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/plasteel/white,
 /area/ai_monitored/turret_protected/ai)
 "acH" = (
@@ -54405,6 +54406,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"fMB" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/white{
+	heat_capacity = 1e+006
+	},
+/area/ai_monitored/turret_protected/ai)
 "fNv" = (
 /obj/structure/chair{
 	dir = 8
@@ -61802,6 +61812,13 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard)
+"rXK" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/white,
+/area/ai_monitored/turret_protected/ai)
 "rXT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -62832,6 +62849,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
+"tZz" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/mob/living/silicon/robot/shell,
+/turf/open/floor/plasteel/white,
+/area/ai_monitored/turret_protected/ai)
 "uaC" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
@@ -97028,7 +97052,7 @@ acn
 acw
 abY
 abV
-acc
+tZz
 acG
 acQ
 acX
@@ -99598,8 +99622,8 @@ acu
 acw
 abY
 abX
-acg
-aci
+rXK
+fMB
 acU
 adf
 adq

@@ -16012,6 +16012,7 @@
 	dir = 8;
 	pixel_x = 26
 	},
+/mob/living/silicon/robot/shell,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "aIY" = (
@@ -72428,6 +72429,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
+"tuN" = (
+/mob/living/silicon/robot/shell,
+/turf/open/floor/circuit,
+/area/ai_monitored/turret_protected/ai)
 "tyI" = (
 /obj/machinery/atmospherics/pipe/simple/supplymain/visible{
 	dir = 4
@@ -104070,8 +104075,8 @@ aaU
 avv
 ajO
 aGi
-axI
-axI
+tuN
+tuN
 aGi
 ajO
 bFf
@@ -105612,7 +105617,7 @@ aaa
 avv
 ajO
 aGi
-axI
+tuN
 aIX
 aGi
 ajO
