@@ -620,8 +620,8 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 /obj/item/toy/plush/mothplushie
 	name = "moth plushie"
 	desc = "A cute toy that resembles an even cuter moth."
-	icon_state = "plushie_h"
-	item_state = "plushie_h"
+	icon_state = "moth"
+	item_state = "moth"
 	attack_verb = list("buzzed")
 	gender = MALE // I want infinite moth plushies.
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
