@@ -836,6 +836,8 @@
 	icon_state = "gripper_mining"
 	can_hold = list(
 		/obj/item/survivalcapsule
+		/obj/item/hivelordstabilizer
+		/obj/item/organ/regenerative_core
 		)
 
 /obj/item/weapon/gripper/medical
