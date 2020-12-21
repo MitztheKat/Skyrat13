@@ -46,6 +46,9 @@
 		/obj/item/instrument/harmonica,
 		/obj/item/mining_voucher,
 		/obj/item/suit_voucher,
+		/obj/item/door_remote,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/healthanalyzer,
 		/obj/item/reagent_containers/pill))
 
 /obj/item/storage/wallet/Exited(atom/movable/AM)

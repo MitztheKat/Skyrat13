@@ -613,20 +613,20 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 	desc = "A cute toy that resembles an even cuter bee."
 	icon_state = "plushie_h"
 	item_state = "plushie_h"
-	attack_verb = list("buzzed")
+	attack_verb = list("stung")
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
-	
+
 /obj/item/toy/plush/mothplushie
 	name = "moth plushie"
-	desc = "A cute toy that resembles an even cuter bee."
+	desc = "A cute toy that resembles an even cuter moth."
 	icon_state = "plushie_h"
 	item_state = "plushie_h"
-	attack_verb = list("stung")
+	attack_verb = list("buzzed")
 	gender = MALE // I want infinite moth plushies.
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
 	var/suicide_count = 0
-	
+
 /obj/item/toy/plush/mothplushie/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] stares deeply into the eyes of [src] and it begins consuming [user.p_them()]!  It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	suicide_count++
@@ -634,7 +634,6 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 		desc = "A plushie depicting an unsettling mothperson. After killing [suicide_count] [suicide_count == 1 ? "person" : "people"] it's not looking so huggable now..."
 	else
 		desc = "A plushie depicting a creepy mothperson. It's killed [suicide_count] people! I don't think I want to hug it any more!"
-		divine = TRUE
 		resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	playsound(src, 'sound/hallucinations/wail.ogg', 50, TRUE, -1)
 	var/list/available_spots = get_adjacent_open_turfs(loc)

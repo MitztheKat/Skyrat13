@@ -835,8 +835,8 @@
 	desc = "A simple grasping tool for carrying and deploying shelter capsules. Alt click to drop instead of use."
 	icon_state = "gripper_mining"
 	can_hold = list(
-		/obj/item/survivalcapsule
-		/obj/item/hivelordstabilizer
+		/obj/item/survivalcapsule,
+		/obj/item/hivelordstabilizer,
 		/obj/item/organ/regenerative_core
 		)
 
