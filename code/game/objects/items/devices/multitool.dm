@@ -256,7 +256,13 @@
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "multitool"
 	toolspeed = 0.1
-
+	
+/obj/item/multitool/abductor/implant
+	name = "multitool"
+	desc = "An optimized, highly advanced stripped-down multitool able to interface with electronics far better than its standard counterpart."
+	icon = 'icons/obj/items_cyborg.dmi'
+	icon_state = "multitool_cyborg"
+	
 /obj/item/multitool/advanced
 	name = "advanced multitool"
 	desc = "The reproduction of an abductor's multitool, this multitool is a classy silver."

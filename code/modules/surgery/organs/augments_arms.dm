@@ -273,6 +273,12 @@
 	name = "arm-mounted riot shield"
 	desc = "A deployable riot shield to help deal with civil unrest."
 	contents = newlist(/obj/item/shield/riot/implant)
+	
+/obj/item/organ/cyberimp/arm/botany
+	name = "botany arm implant"
+	desc = "A rather simple arm implant containing tools used in gardening and botanical research."
+	contents = newlist(/obj/item/cultivator, /obj/item/shovel/spade, /obj/item/hatchet, /obj/item/gun/energy/floragun, /obj/item/plant_analyzer, /obj/item/reagent_containers/glass/beaker/plastic, /obj/item/storage/bag/plants, /obj/item/storage/bag/plants/portaseeder)
+
 
 /obj/item/organ/cyberimp/arm/shield/Extend(obj/item/I)
 	if(I.obj_integrity == 0)				//that's how the shield recharge works

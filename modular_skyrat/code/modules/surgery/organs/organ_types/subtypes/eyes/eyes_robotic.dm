@@ -18,7 +18,7 @@
 /obj/item/organ/eyes/robotic/xray
 	name = "\improper X-ray eyes"
 	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
-	eye_color = "000"
+	eye_color = "00ffe5"
 	see_in_dark = 8
 	sight_flags = SEE_MOBS | SEE_OBJS | SEE_TURFS
 
@@ -253,3 +253,11 @@
 	UnregisterSignal(owner, COMSIG_MOB_DEATH)
 	UnregisterSignal(owner, COMSIG_LIVING_GAIN_UNCONSCIOUS)
 	UnregisterSignal(owner, COMSIG_LIVING_STOP_UNCONSCIOUS)
+
+
+/obj/item/organ/eyes/night_vision/cyber
+	name = "nightvision eyes"
+	desc = "A pair of eyes with built-in nightvision optics, with the additional bonus of being rad as hell."
+	eye_color = "0ffc03"
+	status = ORGAN_ROBOTIC
+	organ_flags = ORGAN_SYNTHETIC
