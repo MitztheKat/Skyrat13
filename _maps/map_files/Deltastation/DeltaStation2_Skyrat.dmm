@@ -40514,6 +40514,7 @@
 "bNR" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
+/obj/item/toy/plush/mothplushie,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "bNS" = (
