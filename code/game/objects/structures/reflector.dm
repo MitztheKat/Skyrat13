@@ -84,7 +84,7 @@
 		W.play_tool_sound(src)
 		return
 
-	if(istype(W, /obj/item/wrench))
+	if(W.tool_behaviour == TOOL_WRENCH)
 		if(anchored)
 			to_chat(user, "<span class='warning'>Unweld [src] from the floor first!</span>")
 			return

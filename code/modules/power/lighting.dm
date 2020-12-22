@@ -107,7 +107,7 @@
 		return
 	switch(stage)
 		if(1)
-			if(istype(W, /obj/item/wrench))
+			if(W.tool_behaviour == TOOL_WRENCH)
 				to_chat(usr, "<span class='notice'>You begin deconstructing [src]...</span>")
 				if (W.use_tool(src, user, 30, volume=50))
 					new /obj/item/stack/sheet/metal(drop_location(), sheets_refunded)
@@ -127,11 +127,11 @@
 					to_chat(user, "<span class='warning'>You need one length of cable to wire [src]!</span>")
 				return
 		if(2)
-			if(istype(W, /obj/item/wrench))
+			if(W.tool_behaviour == TOOL_WRENCH)
 				to_chat(usr, "<span class='warning'>You have to remove the wires first!</span>")
 				return
 
-			if(istype(W, /obj/item/wirecutters))
+			if(W.tool_behaviour == TOOL_WIRECUTTER)
 				stage = 1
 				icon_state = "[fixture_type]-construct-stage1"
 				new /obj/item/stack/cable_coil(drop_location(), 1, "red")

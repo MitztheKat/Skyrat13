@@ -155,7 +155,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 			to_chat(user, "<span class='notice'>You remove the conveyor belt.</span>")
 			qdel(src)
 
-	else if(istype(I, /obj/item/wrench))
+	else if(I.tool_behaviour == TOOL_WRENCH)
 		if(!(stat & BROKEN))
 			I.play_tool_sound(src)
 			setDir(turn(dir,-45))
@@ -309,7 +309,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 		CHECK_TICK
 
 /obj/machinery/conveyor_switch/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/crowbar))
+	if(I.tool_behaviour == TOOL_CROWBAR)
 		var/obj/item/conveyor_switch_construct/C = new/obj/item/conveyor_switch_construct(src.loc)
 		C.id = id
 		transfer_fingerprints_to(C)

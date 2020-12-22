@@ -40,7 +40,7 @@
 
 
 /obj/machinery/porta_turret_cover/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/wrench) && !parent_turret.on)
+	if(I.tool_behaviour == TOOL_WRENCH && !parent_turret.on)
 		if(parent_turret.raised)
 			return
 

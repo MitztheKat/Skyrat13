@@ -185,7 +185,7 @@
 	else if(default_deconstruction_crowbar(W))
 		return
 
-	else if(istype(W, /obj/item/wirecutters))
+	else if(W.tool_behaviour == TOOL_WIRECUTTER)
 		if(panel_open)
 			link_console_and_hub()
 			to_chat(user, "<span class='caution'>You reconnect the station to nearby machinery.</span>")

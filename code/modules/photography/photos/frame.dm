@@ -123,7 +123,7 @@
 			to_chat(user, "<span class='notice'>You unsecure [name].</span>")
 			deconstruct()
 
-	else if(istype(I, /obj/item/wirecutters) && framed)
+	else if(I.tool_behaviour == TOOL_WIRECUTTER && framed)
 		framed.forceMove(drop_location())
 		framed = null
 		user.visible_message("<span class='warning'>[user] cuts away [framed] from [src]!</span>")

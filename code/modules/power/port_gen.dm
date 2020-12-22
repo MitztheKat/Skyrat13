@@ -170,7 +170,7 @@
 		return
 	else if(!active)
 
-		if(istype(O, /obj/item/wrench))
+		if(O.tool_behaviour == TOOL_WRENCH)
 
 			if(!anchored && !isinspace())
 				connect_to_network()

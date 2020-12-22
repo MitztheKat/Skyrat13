@@ -66,7 +66,7 @@
 		else
 			to_chat(user, "<span class='warning'>[src]'s screws can't get any tighter!</span>")
 		return //This used to not exist and drones who repaired themselves also stabbed the shit out of themselves.
-	else if(istype(I, /obj/item/wrench) && user != src) //They aren't required to be hacked, because laws can change in other ways (i.e. admins)
+	else if(I.tool_behaviour == TOOL_WRENCH && user != src) //They aren't required to be hacked, because laws can change in other ways (i.e. admins)
 		user.visible_message("<span class='notice'>[user] starts resetting [src]...</span>", \
 							 "<span class='notice'>You press down on [src]'s factory reset control...</span>")
 		if(I.use_tool(src, user, 50, volume=50))

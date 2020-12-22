@@ -76,7 +76,7 @@
 	return ..()
 
 /obj/structure/AIcore/attackby(obj/item/P, mob/user, params)
-	if(istype(P, /obj/item/wrench))
+	if(P.tool_behaviour == TOOL_WRENCH)
 		return default_unfasten_wrench(user, P, 20)
 	if(!anchored)
 		if(istype(P, /obj/item/weldingtool) && can_deconstruct)
@@ -111,7 +111,7 @@
 					state = SCREWED_CORE
 					update_icon()
 					return
-				if(istype(P, /obj/item/crowbar))
+				if(P.tool_behaviour == TOOL_CROWBAR)
 					P.play_tool_sound(src)
 					to_chat(user, "<span class='notice'>You remove the circuit board.</span>")
 					state = EMPTY_CORE
@@ -139,7 +139,7 @@
 						to_chat(user, "<span class='warning'>You need five lengths of cable to wire the AI core!</span>")
 					return
 			if(CABLED_CORE)
-				if(istype(P, /obj/item/wirecutters))
+				if(P.tool_behaviour == TOOL_WIRECUTTER)
 					if(brain)
 						to_chat(user, "<span class='warning'>Get that [brain.name] out of there first!</span>")
 					else
@@ -201,7 +201,7 @@
 					update_icon()
 					return
 
-				if(istype(P, /obj/item/crowbar) && brain)
+				if(P.tool_behaviour == TOOL_CROWBAR && brain)
 					P.play_tool_sound(src)
 					to_chat(user, "<span class='notice'>You remove the brain.</span>")
 					brain.forceMove(loc)
@@ -210,7 +210,7 @@
 					return
 
 			if(GLASS_CORE)
-				if(istype(P, /obj/item/crowbar))
+				if(P.tool_behaviour == TOOL_CROWBAR)
 					P.play_tool_sound(src)
 					to_chat(user, "<span class='notice'>You remove the glass panel.</span>")
 					state = CABLED_CORE

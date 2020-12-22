@@ -239,7 +239,7 @@
 
 /obj/machinery/porta_turret/attackby(obj/item/I, mob/user, params)
 	if(stat & BROKEN)
-		if(istype(I, /obj/item/crowbar))
+		if(I.tool_behaviour == TOOL_CROWBAR)
 			//If the turret is destroyed, you can remove it with a crowbar to
 			//try and salvage its components
 			to_chat(user, "<span class='notice'>You begin prying the metal coverings off...</span>")
@@ -257,7 +257,7 @@
 					to_chat(user, "<span class='notice'>You remove the turret but did not manage to salvage anything.</span>")
 				qdel(src)
 
-	else if((istype(I, /obj/item/wrench)) && (!on))
+	else if((I.tool_behaviour == TOOL_WRENCH) && (!on))
 		if(raised)
 			return
 

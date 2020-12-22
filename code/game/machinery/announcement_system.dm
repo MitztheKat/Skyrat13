@@ -59,7 +59,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	update_icon()
 
 /obj/machinery/announcement_system/attackby(obj/item/P, mob/user, params)
-	if(istype(P, /obj/item/screwdriver))
+	if(P.tool_behaviour == TOOL_SCREWDRIVER)
 		P.play_tool_sound(src)
 		panel_open = !panel_open
 		to_chat(user, "<span class='notice'>You [panel_open ? "open" : "close"] the maintenance hatch of [src].</span>")

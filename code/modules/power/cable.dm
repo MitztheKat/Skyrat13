@@ -155,7 +155,7 @@ By design, d1 is the smallest direction and d2 is the highest
 	var/turf/T = get_turf(src)
 	if(T.intact)
 		return
-	if(istype(W, /obj/item/wirecutters))
+	if(W.tool_behaviour == TOOL_WIRECUTTER)
 		if (shock(user, 50))
 			return
 		user.visible_message("[user] cuts the cable.", "<span class='notice'>You cut the cable.</span>")

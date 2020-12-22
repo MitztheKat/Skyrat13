@@ -160,7 +160,7 @@
 
 /obj/structure/falsewall/reinforced/attackby(obj/item/tool, mob/user)
 	..()
-	if(istype(tool, /obj/item/wirecutters))
+	if(tool.tool_behaviour == TOOL_WIRECUTTER)
 		dismantle(user, TRUE, tool)
 
 /*

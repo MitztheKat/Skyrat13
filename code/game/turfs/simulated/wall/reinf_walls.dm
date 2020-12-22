@@ -65,7 +65,7 @@
 	//DECONSTRUCTION
 	switch(d_state)
 		if(INTACT)
-			if(istype(W, /obj/item/wirecutters))
+			if(W.tool_behaviour == TOOL_WIRECUTTER)
 				W.play_tool_sound(src, 100)
 				d_state = SUPPORT_LINES
 				update_icon()
@@ -83,7 +83,7 @@
 					to_chat(user, "<span class='notice'>You unsecure the support lines.</span>")
 				return 1
 
-			else if(istype(W, /obj/item/wirecutters))
+			else if(W.tool_behaviour == TOOL_WIRECUTTER)
 				W.play_tool_sound(src, 100)
 				d_state = INTACT
 				update_icon()
@@ -114,7 +114,7 @@
 				return 1
 
 		if(CUT_COVER)
-			if(istype(W, /obj/item/crowbar))
+			if(W.tool_behaviour == TOOL_CROWBAR)
 				to_chat(user, "<span class='notice'>You struggle to pry off the cover...</span>")
 				if(W.use_tool(src, user, 100, volume=100))
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != CUT_COVER)
@@ -137,7 +137,7 @@
 				return 1
 
 		if(ANCHOR_BOLTS)
-			if(istype(W, /obj/item/wrench))
+			if(W.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You start loosening the anchoring bolts which secure the support rods to their frame...</span>")
 				if(W.use_tool(src, user, 40, volume=100))
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != ANCHOR_BOLTS)
@@ -147,7 +147,7 @@
 					to_chat(user, "<span class='notice'>You remove the bolts anchoring the support rods.</span>")
 				return 1
 
-			if(istype(W, /obj/item/crowbar))
+			if(W.tool_behaviour == TOOL_CROWBAR)
 				to_chat(user, "<span class='notice'>You start to pry the cover back into place...</span>")
 				if(W.use_tool(src, user, 20, volume=100))
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != ANCHOR_BOLTS)
@@ -170,7 +170,7 @@
 					to_chat(user, "<span class='notice'>You slice through the support rods.</span>")
 				return 1
 
-			if(istype(W, /obj/item/wrench))
+			if(W.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You start tightening the bolts which secure the support rods to their frame...</span>")
 				W.play_tool_sound(src, 100)
 				if(W.use_tool(src, user, 40))
@@ -182,7 +182,7 @@
 				return 1
 
 		if(SHEATH)
-			if(istype(W, /obj/item/crowbar))
+			if(W.tool_behaviour == TOOL_CROWBAR)
 				to_chat(user, "<span class='notice'>You struggle to pry off the outer sheath...</span>")
 				if(W.use_tool(src, user, 100, volume=100))
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SHEATH)

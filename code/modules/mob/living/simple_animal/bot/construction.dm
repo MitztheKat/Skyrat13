@@ -442,7 +442,7 @@
 				S.robot_arm = robot_arm
 				qdel(I)
 				qdel(src)
-			if(istype(I, /obj/item/wrench))
+			if(I.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "You adjust [src]'s arm slots to mount extra weapons")
 				build_step ++
 				return

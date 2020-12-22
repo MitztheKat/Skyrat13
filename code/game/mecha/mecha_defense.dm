@@ -202,7 +202,7 @@
 				to_chat(user, "<span class='warning'>Invalid ID: Access denied.</span>")
 		else
 			to_chat(user, "<span class='warning'>Maintenance protocols disabled by operator.</span>")
-	else if(istype(W, /obj/item/wrench))
+	else if(W.tool_behaviour == TOOL_WRENCH)
 		if(state==1)
 			state = 2
 			to_chat(user, "<span class='notice'>You undo the securing bolts.</span>")
@@ -210,7 +210,7 @@
 			state = 1
 			to_chat(user, "<span class='notice'>You tighten the securing bolts.</span>")
 		return
-	else if(istype(W, /obj/item/crowbar))
+	else if(W.tool_behaviour == TOOL_CROWBAR)
 		if(state==2)
 			state = 3
 			to_chat(user, "<span class='notice'>You open the hatch to the power unit.</span>")
@@ -226,7 +226,7 @@
 			else
 				to_chat(user, "<span class='warning'>You need two lengths of cable to fix this mech!</span>")
 		return
-	else if(istype(W, /obj/item/screwdriver) && user.a_intent != INTENT_HARM)
+	else if(W.tool_behaviour == TOOL_SCREWDRIVER && user.a_intent != INTENT_HARM)
 		if(internal_damage & MECHA_INT_TEMP_CONTROL)
 			clearInternalDamage(MECHA_INT_TEMP_CONTROL)
 			to_chat(user, "<span class='notice'>You repair the damaged temperature controller.</span>")

@@ -37,7 +37,7 @@
 				to_chat(user, "<span class='warning'>\The [IT] is too small for \the [src].</span>")
 				return
 			updateTank(W, 0, user)
-	else if(istype(W, /obj/item/wrench))
+	else if(W.tool_behaviour == TOOL_WRENCH)
 		switch(fisto_setting)
 			if(1)
 				fisto_setting = 2

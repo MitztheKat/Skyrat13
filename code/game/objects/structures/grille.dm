@@ -136,7 +136,7 @@
 /obj/structure/grille/attackby(obj/item/W, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	add_fingerprint(user)
-	if(istype(W, /obj/item/wirecutters))
+	if(W.tool_behaviour == TOOL_WIRECUTTER)
 		if(!shock(user, 100))
 			W.play_tool_sound(src, 100)
 			deconstruct()

@@ -155,7 +155,7 @@
 				deconstruct(TRUE)
 			return
 
-		if(istype(I, /obj/item/wrench) && deconstruction_ready)
+		if(I.tool_behaviour == TOOL_WRENCH && deconstruction_ready)
 			to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
 			if(I.use_tool(src, user, 40, volume=50))
 				playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
@@ -664,7 +664,7 @@
 		step(O, get_dir(O, src))
 
 /obj/structure/rack/attackby(obj/item/W, mob/user, params)
-	if (istype(W, /obj/item/wrench) && !(flags_1&NODECONSTRUCT_1))
+	if (W.tool_behaviour == TOOL_WRENCH && !(flags_1&NODECONSTRUCT_1))
 		W.play_tool_sound(src)
 		deconstruct(TRUE)
 		return
@@ -723,7 +723,7 @@
 	var/building = FALSE
 
 /obj/item/rack_parts/attackby(obj/item/W, mob/user, params)
-	if (istype(W, /obj/item/wrench))
+	if (W.tool_behaviour == TOOL_WRENCH)
 		new /obj/item/stack/sheet/metal(user.loc)
 		qdel(src)
 	else

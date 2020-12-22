@@ -88,7 +88,7 @@
 				to_chat(user, "<span class='notice'>You disassemble the airlock assembly.</span>")
 				deconstruct(TRUE)
 
-	else if(istype(W, /obj/item/wrench))
+	else if(W.tool_behaviour == TOOL_WRENCH)
 		if(!anchored )
 			var/door_check = 1
 			for(var/obj/machinery/door/D in loc)
@@ -134,7 +134,7 @@
 			to_chat(user, "<span class='notice'>You wire the airlock assembly.</span>")
 			name = "wired airlock assembly"
 
-	else if(istype(W, /obj/item/wirecutters) && state == AIRLOCK_ASSEMBLY_NEEDS_ELECTRONICS )
+	else if(W.tool_behaviour == TOOL_WIRECUTTER && state == AIRLOCK_ASSEMBLY_NEEDS_ELECTRONICS )
 		user.visible_message("[user] cuts the wires from the airlock assembly.", \
 							"<span class='notice'>You start to cut the wires from the airlock assembly...</span>")
 
@@ -162,7 +162,7 @@
 			electronics = W
 
 
-	else if(istype(W, /obj/item/crowbar) && state == AIRLOCK_ASSEMBLY_NEEDS_SCREWDRIVER )
+	else if(W.tool_behaviour == TOOL_CROWBAR && state == AIRLOCK_ASSEMBLY_NEEDS_SCREWDRIVER )
 		user.visible_message("[user] removes the electronics from the airlock assembly.", \
 								"<span class='notice'>You start to remove electronics from the airlock assembly...</span>")
 

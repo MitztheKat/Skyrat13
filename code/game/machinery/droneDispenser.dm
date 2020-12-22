@@ -210,7 +210,7 @@
 		icon_state = icon_on
 
 /obj/machinery/droneDispenser/attackby(obj/item/I, mob/living/user)
-	if(istype(I, /obj/item/crowbar))
+	if(I.tool_behaviour == TOOL_CROWBAR)
 		var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 		materials.retrieve_all()
 		I.play_tool_sound(src)
