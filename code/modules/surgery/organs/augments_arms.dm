@@ -1,4 +1,5 @@
-/* moved to modular_skyrat
+//moved to modular_skyrat
+/*
 /obj/item/organ/cyberimp/arm
 	name = "arm-mounted implant"
 	desc = "You shouldn't see this! Adminhelp and report this as an issue on github!"
@@ -221,6 +222,11 @@
 	items_list += new /obj/item/kitchen/knife/combat/cyborg(src)
 	return TRUE
 
+/obj/item/organ/cyberimp/arm/botany
+	name = "botany arm implant"
+	desc = "A rather simple arm implant containing tools used in gardening and botanical research."
+	contents = newlist(/obj/item/cultivator, /obj/item/shovel/spade, /obj/item/hatchet, /obj/item/gun/energy/floragun, /obj/item/plant_analyzer, /obj/item/reagent_containers/glass/beaker/plastic, /obj/item/storage/bag/plants, /obj/item/storage/bag/plants/portaseeder)
+
 ///////////////
 //Combat Arms//
 ///////////////
@@ -271,7 +277,8 @@
 
 /obj/item/organ/cyberimp/arm/shield
 	name = "arm-mounted riot shield"
-	desc = "A deployable riot shield to help deal with civil unrest."
+	desc = "A deployable hardlight riot shield to help deal with civil unrest."
+	icon_state = "implant-shield"
 	contents = newlist(/obj/item/shield/riot/implant)
 
 /obj/item/organ/cyberimp/arm/shield/Extend(obj/item/I)
@@ -289,4 +296,5 @@
 	var/obj/item/assembly/flash/armimplant/F = new(src)
 	items_list += F
 	F.I = src
+
 */

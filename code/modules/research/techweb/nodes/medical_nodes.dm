@@ -71,8 +71,8 @@
 	display_name = "Cybernetic Implants"
 	description = "Electronic implants that improve humans."
 	prereq_ids = list("adv_biotech", "adv_datatheory")
-	design_ids = list("ci-nutriment", "ci-breather", "ci-gloweyes", "ci-welding", "ci-medhud", "ci-sechud", "ci-service")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	design_ids = list("ci-nutriment", "ci-scanner", "ci-breather", "ci-gloweyes", "ci-welding", "ci-medhud", "ci-sechud", "ci-diaghud", "ci-service", "ci-botany")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
 /datum/techweb_node/adv_cyber_implants
 	id = "adv_cyber_implants"
@@ -80,15 +80,23 @@
 	description = "Upgraded and more powerful cybernetic implants."
 	prereq_ids = list("neural_programming", "cyber_implants","integrated_HUDs")
 	design_ids = list("ci-toolset", "ci-surgery", "ci-reviver", "ci-nutrimentplus")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
 
 /datum/techweb_node/combat_cyber_implants
 	id = "combat_cyber_implants"
 	display_name = "Combat Cybernetic Implants"
 	description = "Military grade combat implants to improve performance."
 	prereq_ids = list("adv_cyber_implants","weaponry","NVGtech","high_efficiency")
-	design_ids = list("ci-xray", "ci-thermals", "ci-antidrop", "ci-antistun", "ci-thrusters", "ci-shield")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	design_ids = list("ci-xray", "ci-thermals", "ci-nv", "ci-antidrop", "ci-antistun", "ci-antisleep", "ci-thrusters", "ci-shield", "ci-mantis", "ci-flash")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12000)
+
+/*/datum/techweb_node/mining_cyber_implants
+	id = "mining_cyber_implants"
+	display_name = "Advanced Mining Implants"
+	description = "Minifying advanced mining tools for use in internal arm implants."
+	prereq_ids = list("adv_cyber_implants","high_efficiency","practical_bluespace","adv_mining")
+	design_ids = list("ci-mining")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)*/ //I don't care enough about this to fix its runtimes, someone else can do it if they want.
 
 /////////////////////////Advanced Surgery/////////////////////////
 /datum/techweb_node/imp_wt_surgery
