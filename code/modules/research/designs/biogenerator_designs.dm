@@ -45,12 +45,52 @@
 	build_path = /obj/item/reagent_containers/food/snacks/cube/monkey
 	category = list("initial", "Food")
 
+/datum/design/rice
+	name = "Rice box"
+	id = "ricebox"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 50)
+	build_path = /obj/item/reagent_containers/food/condiment/rice
+	category = list("initial", "Food")
+
+/datum/design/bbqsauce
+	name = "BBQ Sauce"
+	id = "bbqsauce"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 20)
+	build_path = /obj/item/reagent_containers/food/condiment/pack/bbqsauce
+	category = list("initial", "Food")
+
+/datum/design/soysauce
+	name = "Soy Sauce"
+	id = "soysauce"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 20)
+	build_path = /obj/item/reagent_containers/food/condiment/pack/soysauce
+	category = list("initial", "Food")
+
 /datum/design/smeat
 	name = "Biomass Meat Slab"
 	id = "smeat"
 	build_type = BIOGENERATOR
 	materials = list(/datum/material/biomass = 175)
 	build_path = /obj/item/reagent_containers/food/snacks/meat/slab/synthmeat
+	category = list("initial", "Food")
+
+/datum/design/carpmeat
+	name = "Synthetic Carp Meat Slab"
+	id = "carpmeat"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 250)
+	build_path = /obj/item/reagent_containers/food/snacks/carpmeat/imitation
+	category = list("initial", "Food")
+	
+/datum/design/seaweed
+	name = "Seaweed"
+	id = "seaweed"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 90)
+	build_path = /obj/item/reagent_containers/food/snacks/sea_weed
 	category = list("initial", "Food")
 
 /datum/design/ez_nut
@@ -163,6 +203,14 @@
 	build_type = BIOGENERATOR
 	materials = list(/datum/material/biomass = 300)
 	build_path = /obj/item/storage/belt/janitor
+	category = list("initial","Organic Materials")
+
+/datum/design/utilbelt
+	name = "Toolbelt"
+	id = "utilbelt"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 300)
+	build_path = /obj/item/storage/belt/utility
 	category = list("initial","Organic Materials")
 
 /datum/design/s_holster

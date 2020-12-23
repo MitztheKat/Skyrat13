@@ -397,7 +397,7 @@
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Lewd Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
+/*
 /datum/supply_pack/misc/lewd
 	name = "Lewd Crate" // OwO
 	desc = "Pssst. Want to have a good time with your sluts? Well I got what you want! Maid clothing, dildos, collars and more!" //Skyrat change, fixed grammatical error
@@ -429,7 +429,7 @@
 	crate_name = "deluxe keg"
 	crate_type = /obj/structure/closet/crate
 
-
+*/
 ///Special supply crate that generates random syndicate gear up to a determined TC value
 
 /datum/supply_pack/misc/syndicate

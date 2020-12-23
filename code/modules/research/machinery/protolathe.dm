@@ -32,3 +32,10 @@
 /obj/machinery/rnd/production/protolathe/offstation
 	offstation_security_levels = FALSE
 	circuit = /obj/item/circuitboard/machine/protolathe/offstation
+
+/obj/machinery/rnd/production/protolathe/emag_act(mob/user)
+	. = ..()
+	obj_flags |= EMAGGED
+	to_chat(user, "<span class='warning'>You unlock all the modules!</span>")
+	allowed_department_flags = ALL
+	return TRUE

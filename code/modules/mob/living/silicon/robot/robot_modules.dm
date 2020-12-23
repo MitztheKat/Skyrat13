@@ -902,6 +902,8 @@
 		/obj/item/razor,
 		// SKYRAT EDIT - Service Borg Fix
 		/obj/item/rsf/cyborg,
+		/obj/item/weapon/gripper/service,
+		/obj/item/kitchen/rollingpin,
 		// SKYRAT EDIT END
 		/obj/item/instrument/violin,
 		/obj/item/instrument/guitar,

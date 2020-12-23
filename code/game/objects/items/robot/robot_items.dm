@@ -767,7 +767,8 @@
 		/obj/item/stack/tile,
 		/obj/item/stack/rods,
 		/obj/item/stock_parts,
-		/obj/item/stack/cable_coil
+		/obj/item/stack/cable_coil,
+		/obj/item/wallframe/light_fixture
 		)
 	//Basically a blacklist for any subtypes above we dont want
 	var/list/cannot_hold = list(
@@ -837,7 +838,19 @@
 	can_hold = list(
 		/obj/item/survivalcapsule,
 		/obj/item/hivelordstabilizer,
+		/obj/item/lazarus_injector,
 		/obj/item/organ/regenerative_core
+		)
+
+/obj/item/weapon/gripper/service
+	name = "service gripper"
+	desc = "A simple grasping tool for service use. Alt click to drop instead of use."
+	icon_state = "gripper"
+	can_hold = list(
+		/obj/item/reagent_containers/food,
+		/obj/item/pizzabox,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/kitchen/knife
 		)
 
 /obj/item/weapon/gripper/medical

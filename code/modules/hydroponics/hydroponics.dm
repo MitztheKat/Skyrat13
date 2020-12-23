@@ -643,7 +643,7 @@
 		adjustHealth(round(S.get_reagent_amount(/datum/reagent/ammonia) * 0.5))
 		adjustNutri(round(S.get_reagent_amount(/datum/reagent/ammonia) * 1))
 		if(myseed)
-			myseed.adjust_yield(round(S.get_reagent_amount(/datum/reagent/ammonia) * 0.01))
+			myseed.adjust_yield(round(S.get_reagent_amount(/datum/reagent/ammonia) * 0.2))
 
 	// Saltpetre is used for gardening IRL, to simplify highly, it speeds up growth and strengthens plants
 	if(S.has_reagent(/datum/reagent/saltpetre, 1))
@@ -663,8 +663,9 @@
 	if(S.has_reagent(/datum/reagent/diethylamine, 1))
 		adjustHealth(round(S.get_reagent_amount(/datum/reagent/diethylamine) * 1))
 		adjustNutri(round(S.get_reagent_amount(/datum/reagent/diethylamine) * 2))
+		mutmod = 0
 		if(myseed)
-			myseed.adjust_yield(round(S.get_reagent_amount(/datum/reagent/diethylamine) * 0.02))
+			myseed.adjust_yield(round(S.get_reagent_amount(/datum/reagent/diethylamine) * 0.1))
 		adjustPests(-rand(1,2))
 
 	// Nutriment Compost, effectively

@@ -27,6 +27,21 @@
 	cost = 300 //double their export value
 	contains = list(/obj/item/stack/sheet/glass/fifty)
 
+/datum/supply_pack/materials/sample
+	goody = PACK_GOODY_PUBLIC
+	name = "mineral sample pack"
+	desc = "No miners? No AI? Enjoy this crate to boost the station's value!"
+	cost = 5200 //double their export value
+	contains = list(
+	/obj/item/stack/sheet/mineral/diamond/five,
+	/obj/item/stack/sheet/mineral/uranium/five,
+	/obj/item/stack/sheet/mineral/gold/five,
+	/obj/item/stack/sheet/mineral/silver/five,
+	/obj/item/stack/sheet/mineral/plasma/five,
+	/obj/item/stack/sheet/mineral/titanium/five,
+	/obj/item/stack/sheet/plastic/five
+	)
+
 /datum/supply_pack/materials/metal50
 	goody = PACK_GOODY_PUBLIC
 	name = "50 Metal Sheets"
