@@ -4,13 +4,12 @@
 	surgery.step_in_progress = TRUE
 	var/speed_mod = (user == target ? 0.25 : 1) //self-surgery is hard
 	var/advance = FALSE
-	var/obj/item/bodypart/affecting = target.get_bodypart(target_zone)
 	if(preop(user, target, target_zone, tool, surgery) == -1)
 		surgery.step_in_progress = FALSE
 		return FALSE
 	if(tool)
 		speed_mod = tool.toolspeed
-			
+
 	if(do_after(user, time * speed_mod, target = target))
 		var/prob_chance = 100
 		if(target == user) //self-surgery is hard
@@ -20,7 +19,7 @@
 		if(implement_type)	//this means it isn't a require hand or any item step.
 			prob_chance = implements[implement_type]
 		prob_chance *= surgery.get_probability_multiplier()
-		
+
 		if((prob(prob_chance) || (iscyborg(user) && !silicons_obey_prob)) && chem_check(target) && !try_to_fail)
 			if(success(user, target, target_zone, tool, surgery))
 				advance = TRUE
