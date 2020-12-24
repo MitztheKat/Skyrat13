@@ -632,12 +632,12 @@
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/crowbar/cyborg,
-		/obj/item/taperecorder,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/baton/loaded,
 		/obj/item/gun/energy/e_gun/advtaser/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/pinpointer/crew,
+		/obj/item/taperecorder,
 		/obj/item/weapon/gripper/security
 		)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
@@ -904,6 +904,7 @@
 		/obj/item/rsf/cyborg,
 		/obj/item/weapon/gripper/service,
 		/obj/item/kitchen/rollingpin,
+		/obj/item/storage/bag/plants,
 		// SKYRAT EDIT END
 		/obj/item/instrument/violin,
 		/obj/item/instrument/guitar,

@@ -768,7 +768,8 @@
 		/obj/item/stack/rods,
 		/obj/item/stock_parts,
 		/obj/item/stack/cable_coil,
-		/obj/item/wallframe/light_fixture
+		/obj/item/wallframe/light_fixture,
+		/obj/item/glasswork
 		)
 	//Basically a blacklist for any subtypes above we dont want
 	var/list/cannot_hold = list(
@@ -850,7 +851,8 @@
 		/obj/item/reagent_containers/food,
 		/obj/item/pizzabox,
 		/obj/item/storage/fancy/cigarettes,
-		/obj/item/kitchen/knife
+		/obj/item/kitchen/knife,
+		/obj/item/seeds
 		)
 
 /obj/item/weapon/gripper/medical
@@ -863,7 +865,8 @@
 		/obj/item/storage/pill_bottle,
 		/obj/item/reagent_containers/glass,
 		/obj/item/reagent_containers/pill,
-		/obj/item/reagent_containers/blood
+		/obj/item/reagent_containers/blood,
+		/obj/item/organ
 		)
 
 /obj/item/weapon/gripper/security

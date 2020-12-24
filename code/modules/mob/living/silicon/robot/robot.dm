@@ -1134,3 +1134,12 @@
 	if(usr.stat == DEAD)
 		return //won't work if dead
 	ai_roster()
+
+
+/mob/living/silicon/robot/resist()
+	. = ..()
+	if(!buckled_mobs.len)
+		return
+	for(var/i in buckled_mobs)
+		var/mob/unbuckle_me_now = i
+		unbuckle_mob(unbuckle_me_now, FALSE)

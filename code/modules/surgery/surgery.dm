@@ -64,7 +64,7 @@
 
 	if(!requires_tech && !replaced_by)
 		return TRUE
-	
+
 	// True surgeons (like abductor scientists) need no instructions
 	if(requires_tech)
 		. = FALSE
@@ -127,18 +127,28 @@
 	SSblackbox.record_feedback("tally", "surgeries_completed", 1, type)
 	qdel(src)
 
-/datum/surgery/proc/get_probability_multiplier()
-	var/probability = 0.5
+/datum/surgery/proc/get_probability_multiplier(mob/user)
+	var/probability = 0.3
 	var/turf/T = get_turf(target)
+	var/sleepbonus = 0
+	var/borgbonus = 0
 
+	if(target.stat != CONSCIOUS)
+		sleepbonus = 1
+	if(iscyborg(user))
+		borgbonus = 1
+	if(locate(/obj/structure/table/optable/abductor, T))
+		probability = 1.2
+	//if(locate(/obj/machinery/stasis, T))
+	//	probability = 0.8
 	if(locate(/obj/structure/table/optable, T))
-		probability = 1
-	else if(locate(/obj/structure/table, T))
 		probability = 0.8
+	else if(locate(/obj/structure/table, T))
+		probability = 0.6
 	else if(locate(/obj/structure/bed, T))
-		probability = 0.7
+		probability = 0.5
 
-	return probability + success_multiplier
+	return probability + success_multiplier + sleepbonus + borgbonus
 
 /datum/surgery/advanced
 	name = "advanced surgery"

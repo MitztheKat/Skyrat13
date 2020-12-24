@@ -44,32 +44,18 @@
 	attack_hand_interact = TRUE // so the detectives would discover pockets in their hats
 
 /datum/component/storage/concrete/pockets/shoes
+	max_items = 2
 	attack_hand_interact = FALSE
+	max_w_class = WEIGHT_CLASS_SMALL
 	quickdraw = TRUE
 	silent = TRUE
-// SKYRAT EDIT: Removing "/obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/automatic/magrifle/pistol" from the holding. //And also the mini e-guns
+
 /datum/component/storage/concrete/pockets/shoes/Initialize()
 	. = ..()
-	cant_hold = typecacheof(list(/obj/item/screwdriver/power))
-	can_hold = typecacheof(list(
-		/obj/item/kitchen/knife, /obj/item/switchblade, /obj/item/pen, /obj/item/melee/cultblade/dagger,
-		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
-		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
-		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /obj/item/toy/plush/snakeplushie
-		))
 
-//Also removed guns from those shoes
 /datum/component/storage/concrete/pockets/shoes/clown/Initialize()
 	. = ..()
-	cant_hold = typecacheof(list(/obj/item/screwdriver/power))
-	can_hold = typecacheof(list(
-		/obj/item/kitchen/knife, /obj/item/switchblade, /obj/item/pen, /obj/item/melee/cultblade/dagger,
-		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
-		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
-		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /obj/item/bikehorn))
-
+	
 /datum/component/storage/concrete/pockets/pocketprotector
 	max_items = 3
 	max_w_class = WEIGHT_CLASS_TINY

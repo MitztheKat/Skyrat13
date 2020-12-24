@@ -300,6 +300,16 @@
 	custom_materials = null
 	grown_battery = TRUE //it has the overlays for wires
 
+
+/obj/item/stock_parts/cell/upgraded/plus/reactor
+	name = "Bluespace Reactor Cell"
+	desc = "A reactor tightly fitted in a small bluespace pocket dimension, sitting in a cell. Do not eat."
+	icon_state = "bscell"
+	charge = 100
+	maxcharge = 1000
+	rating = 5 //self-recharge makes these desirable
+	self_recharge = 1 // Infused slime cores self-recharge, over time
+
 /obj/item/stock_parts/cell/high/slime
 	name = "charged slime core"
 	desc = "A yellow slime core infused with plasma, it crackles with power."

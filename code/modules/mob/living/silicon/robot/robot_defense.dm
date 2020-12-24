@@ -13,6 +13,14 @@
 		spark_system.start()
 	return ..()
 
+/mob/living/silicon/robot/attack_robot(mob/user)
+	. = ..()
+	if(user == src && buckled_mobs.len && user.a_intent == INTENT_HELP)
+		for(var/i in buckled_mobs)
+			var/mob/buckmob = i
+			unbuckle_mob(buckmob)
+
+
 /mob/living/silicon/robot/attack_hulk(mob/living/carbon/human/user, does_attack_animation = FALSE)
 	. = ..()
 	if(.)

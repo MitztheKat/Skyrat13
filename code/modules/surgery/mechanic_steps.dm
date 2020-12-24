@@ -104,7 +104,7 @@
 
 //open hatch
 /datum/surgery_step/open_hatch
-	name = "Open the hatch"
+	name = "Open the hatch (hands)"
 	accept_hand = 1
 	time = 10
 

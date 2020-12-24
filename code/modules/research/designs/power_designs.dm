@@ -56,6 +56,17 @@
 	build_path = /obj/item/stock_parts/cell/bluespace/empty
 	category = list("Misc","Power Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	
+/datum/design/reactor_cell
+	name = "Bluespace Reactor Cell"
+	desc = "A power cell that constantly recharges itself. good for borgs, not for much else."
+	id = "reactor_cell"
+	build_type = PROTOLATHE | MECHFAB
+	materials = list(/datum/material/iron = 800, /datum/material/gold = 120, /datum/material/glass = 160, /datum/material/diamond = 160, /datum/material/titanium = 300, /datum/material/bluespace = 100)
+	construction_time=200
+	build_path = /obj/item/stock_parts/cell/upgraded/plus/reactor
+	category = list("Misc","Power Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
 /datum/design/inducer
 	name = "Inducer"
