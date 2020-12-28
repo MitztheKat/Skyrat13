@@ -21,7 +21,6 @@ GLOBAL_LIST_INIT(medical_positions, list(
 	"Geneticist",
 	"Virologist",
 	"Paramedic",
-	"Brig Physician",
 	"Psychologist",  //Skyrat change
 	"Chemist"))
 
@@ -57,6 +56,7 @@ GLOBAL_LIST_INIT(security_positions, list(
 	"Head of Security",
 	"Warden",
 	"Detective",
+	"Brig Physician",
 	"Security Officer",
 	"Blueshield"))
 
